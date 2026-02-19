@@ -53,7 +53,7 @@ export default function Home() {
         imageSrc="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=1600"
         imageAlt="German Design Award Winner"
         reversed={true}
-        lightMode={false}
+        lightMode={true}
         linkUrl="/be-inspired/german-design-award-2025"
       />
 

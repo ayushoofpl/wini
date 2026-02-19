@@ -3,8 +3,8 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #D30000;
-  --color-primary-hover: #A80000;
+  --color-primary: #e31a22;
+  --color-primary-hover: #c41219;
 
   --font-sans: var(--font-assistant), "Assistant", Arial, sans-serif;
   --font-serif: var(--font-crimson-pro), "Crimson Pro", serif;

@@ -60,8 +60,8 @@ export function Hero({
 
     const getHeightClass = () => {
         if (isSmall) return "h-[50vh] min-h-[500px]";
-        if (isCinema) return "h-[85vh] md:h-[90vh]";
-        return "h-[90vh] md:h-screen";
+        if (isCinema) return "h-screen min-h-[1050px]";
+        return "h-screen";
     };
 
     return (
@@ -109,7 +109,7 @@ export function Hero({
                         className="max-w-6xl space-y-6"
                     >
                         <motion.div variants={titleVariants} className="overflow-hidden">
-                            <h1 className={`${isSmall ? "text-2xl md:text-4xl" : "text-3xl md:text-5xl lg:text-6xl xl:text-[4.5rem]"} font-slogan text-white leading-[1.1] tracking-tight`}>
+                            <h1 className={`${isSmall ? "text-2xl md:text-4xl" : "text-[50px] md:text-[70px]"} font-light text-white leading-[1.0] tracking-tight`}>
                                 {title || (
                                     <>
                                         Pure <br />

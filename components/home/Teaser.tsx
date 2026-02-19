@@ -28,9 +28,10 @@ export function Teaser({
     imageAlt = "Teaser image",
     reversed = false,
     lightMode = false,
-}: TeaserProps) {
+    className,
+}: TeaserProps & { className?: string }) {
     return (
-        <section className={cn("w-full py-24 md:py-32", lightMode ? "bg-white text-neutral-900" : "bg-neutral-900 text-white")}>
+        <section className={cn("w-full py-24 md:py-32", lightMode ? "bg-white text-neutral-900" : "bg-neutral-900 text-white", className)}>
             <div className="container px-6 2xl:px-0">
                 <div className={cn("flex flex-col gap-16 items-center", reversed ? "md:flex-row-reverse" : "md:flex-row")}>
 
@@ -45,7 +46,7 @@ export function Teaser({
                         )}
 
                         <Reveal delay={0.1}>
-                            <h2 className="text-4xl md:text-6xl font-slogan leading-[1.1] tracking-tight">
+                            <h2 className="text-[40px] md:text-[50px] font-light leading-[1.1] tracking-tight">
                                 {title}
                             </h2>
                         </Reveal>
