@@ -3,10 +3,10 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #E30613;
-  --color-primary-hover: #BF0D17;
+  --color-primary: #D30000;
+  --color-primary-hover: #A80000;
 
-  --font-sans: var(--font-assistant), "Assistant", system-ui, sans-serif;
+  --font-sans: var(--font-assistant), "Assistant", Arial, sans-serif;
   --font-serif: var(--font-crimson-pro), "Crimson Pro", serif;
 
   --radius-default: 0px;
@@ -20,8 +20,8 @@
   --color-neutral-500: #737373;
   --color-neutral-600: #525252;
   --color-neutral-700: #404040;
-  --color-neutral-800: #262626;
-  --color-neutral-900: #151515;
+  --color-neutral-800: #343a40;
+  --color-neutral-900: #212529;
   --color-neutral-950: #0a0a0a;
 
   @keyframes fadeIn {
@@ -52,7 +52,7 @@
 @layer base {
   :root {
     --background: #ffffff;
-    --foreground: #151515;
+    --foreground: #212529;
   }
 
   html {
@@ -71,6 +71,7 @@
   h5,
   h6 {
     @apply font-sans font-light tracking-tight text-neutral-900;
+    font-weight: 300;
   }
 
   a {
