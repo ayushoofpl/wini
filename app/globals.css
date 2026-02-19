@@ -60,7 +60,7 @@
   }
 
   body {
-    @apply antialiased bg-white font-sans text-neutral-900 font-light leading-relaxed;
+    @apply antialiased bg-white font-sans text-black font-light leading-relaxed;
     text-rendering: optimizeLegibility;
   }
 
