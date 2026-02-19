@@ -5,6 +5,7 @@ import { Newsletter } from "@/components/shared/Newsletter";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { Reveal } from "@/components/shared/Reveal";
 import { Teaser } from "@/components/home/Teaser";
+import { ServiceSection } from "@/components/home/ServiceSection";
 
 export default function Home() {
   return (
@@ -80,6 +81,9 @@ export default function Home() {
         className="bg-neutral-50"
         linkUrl="/sara-chipboard"
       />
+
+      {/* Services Section */}
+      <ServiceSection />
 
       {/* WINEA FLEX UP */}
       <Teaser

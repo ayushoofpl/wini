@@ -59,9 +59,9 @@ export function Hero({
     const isCinema = variant === "cinema";
 
     const getHeightClass = () => {
-        if (isSmall) return "h-[50vh] min-h-[500px]";
-        if (isCinema) return "h-screen min-h-[1050px]";
-        return "h-screen";
+        if (isSmall) return "h-[50vh] min-h-[400px]";
+        if (isCinema) return "h-[85vh] md:h-screen md:min-h-[1050px]";
+        return "h-[80vh] md:h-screen";
     };
 
     return (
@@ -109,7 +109,7 @@ export function Hero({
                         className="max-w-6xl space-y-6"
                     >
                         <motion.div variants={titleVariants} className="overflow-hidden">
-                            <h1 className={`${isSmall ? "text-2xl md:text-4xl" : "text-[50px] md:text-[70px]"} font-light text-white leading-[1.0] tracking-tight`}>
+                            <h1 className={`${isSmall ? "text-2xl md:text-4xl" : "text-[42px] sm:text-[50px] md:text-[70px]"} font-light text-white leading-[1.1] tracking-tight`}>
                                 {title || (
                                     <>
                                         Pure <br />
