@@ -54,6 +54,7 @@ export default function Home() {
         imageAlt="German Design Award Winner"
         reversed={true}
         lightMode={true}
+        className="bg-neutral-50"
         linkUrl="/be-inspired/german-design-award-2025"
       />
 
@@ -75,7 +76,8 @@ export default function Home() {
         imageSrc="https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&q=80&w=1600"
         imageAlt="SARA Board Recycled Wood"
         reversed={true}
-        lightMode={false}
+        lightMode={true}
+        className="bg-neutral-50"
         linkUrl="/sara-chipboard"
       />
 
