@@ -6,40 +6,46 @@ import { Reveal } from "@/components/shared/Reveal";
 const CATEGORIES = [
     {
         id: "desks",
-        name: "Home Office",
+        name: "Desks",
         image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200",
-        desc: "Ergonomic desk systems for focused work."
+        desc: "Ergonomic desk systems for focused work.",
     },
     {
-        id: "working",
-        name: "Working",
-        image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
-        desc: "Flexible solutions for the modern office."
-    },
-    {
-        id: "collaboration",
-        name: "Collaboration",
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200",
-        desc: "Spaces for teamwork and creativity."
-    },
-    {
-        id: "communicating",
-        name: "Communicating",
-        image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1200",
-        desc: "Meeting and conference room systems."
-    },
-    {
-        id: "organization",
-        name: "Organization",
+        id: "storage",
+        name: "Storage space",
         image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=1200",
-        desc: "Intelligent storage and filing systems."
+        desc: "Plenty of space with Pedestral, Cabinet, Bookcase & Co.",
     },
     {
-        id: "acoustics",
-        name: "Acoustics",
+        id: "mobile-furniture",
+        name: "Mobile furniture",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200",
+        desc: "On castors: mobile furniture for flexible use.",
+    },
+    {
+        id: "room-acoustics",
+        name: "Room acoustics",
         image: "https://images.unsplash.com/photo-1519642918688-7e43b19245d8?auto=format&fit=crop&q=80&w=1200",
-        desc: "Optimized room acoustics for focus."
-    }
+        desc: "Improve acoustics and sound insulation in the office.",
+    },
+    {
+        id: "room-divider",
+        name: "Room divider",
+        image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
+        desc: "Visual and acoustic shielding.",
+    },
+    {
+        id: "reception-desk",
+        name: "Reception desk",
+        image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1200",
+        desc: "First impression of your visitors.",
+    },
+    {
+        id: "accessories",
+        name: "Accessories",
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
+        desc: "Useful helpers and Smart additions.",
+    },
 ];
 
 export function CategoryGrid() {
