@@ -1,0 +1,208 @@
+.wrapper {
+  padding-top: var(--wrapper-p);
+  padding-bottom: var(--wrapper-p);
+
+  @include media-breakpoint-up(lg) {
+    padding-top: var(--wrapper-p);
+    padding-bottom: var(--wrapper-p);
+  }
+
+  &-pb {
+    padding-bottom: var(--wrapper-p);
+  }
+
+  &-mb {
+    margin-bottom: var(--wrapper-p);
+  }
+
+  &-pt {
+    padding-top: var(--wrapper-p);
+  }
+
+  &-mt {
+    margin-top: var(--wrapper-p);
+  }
+
+  &.wrapper-motiv {
+    padding-bottom: 0;
+  }
+
+  &.wrapper-motiv + .wrapper {
+    padding-top: 60px;
+  }
+}
+/*main > section {
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}*/
+
+.no-motiv {
+  padding-bottom: 0;
+}
+
+.img-video {
+  position: relative;
+  display: block;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    transition: $transition-custom;
+    background: url("../Icons/play.svg") center no-repeat;
+  }
+
+  &:hover::after {
+    transform: scale(1.1);
+  }
+}
+
+.text-columns-2 {
+  @include media-breakpoint-up(xl) {
+    columns: 2;
+    column-gap: $grid-gutter-width;
+  }
+}
+
+.text-columns-3 {
+  @include media-breakpoint-up(xl) {
+    columns: 3;
+    column-gap: $grid-gutter-width;
+  }
+}
+
+ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.list-square, .ce-bodytext ul {
+  @include list-unstyled;
+
+  li {
+    //display:flex;
+    position: relative;
+    margin-bottom: .5em;
+    padding-left: 1.2em;
+
+    &::before {
+      position: absolute;
+      top: 0.3em;
+      left: 0;
+      display: block;
+      width: .8em;
+      height: .8em;
+      content: '';
+      background: $primary;
+    }
+  }
+}
+
+ul.list-checks {
+  @include list-unstyled;
+
+  li {
+    display: flex;
+    margin-bottom: 20px;
+    padding-left: 0;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 50px;
+    }
+
+    &::before {
+      position: static;
+      display: block;
+      flex: 0 0 auto;
+      width: 28px;
+      height: 28px;
+      margin-top: -4px;
+      margin-right: 10px;
+      content: '';
+      background-color: transparent;
+      background: url("../Icons/check-circle.svg") no-repeat center;
+      background-size: contain;
+      @include media-breakpoint-up(lg) {
+        width: 48px;
+        height: 48px;
+        margin-top: -12px;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.img-sample-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  @include media-breakpoint-up(lg) {
+    width: 80px;
+    height: 80px;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.img-hover {
+  display: block;
+  overflow: hidden;
+
+  img {
+    transition: all .5s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+.slidefade {
+  transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+
+  &:not(.show) {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+.wrapper iframe {
+  border: 1px solid rgb(236, 236, 236);
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.mb {
+  &-1 {
+    margin-bottom: rem(5);
+  }
+
+  &-2 {
+    margin-bottom: rem(10);
+  }
+
+  &-3 {
+    margin-bottom: rem(15);
+  }
+
+  &-4 {
+    margin-bottom: rem(20);
+  }
+
+  &-5 {
+    margin-bottom: rem(25);
+  }
+}

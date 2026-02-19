@@ -1,0 +1,45 @@
+.context-nav {
+  position:relative;
+  .btn {
+    white-space: nowrap;
+  }
+  .swiper-slide {
+    width:auto;
+  }
+  &.show-fade-left:before {
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width:100px;
+    pointer-events: none;
+    background-image: linear-gradient(to left,rgba($white,0),rgba($white,100%));
+    z-index:2;
+  }
+  &:after {
+    content: '';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    width:100px;
+    pointer-events: none;
+    background-image: linear-gradient(to right,rgba($white,0),rgba($white,100%));
+    z-index:1;
+  }
+  &__body {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position:relative;
+    scrollbar-width: thin;
+    overflow-scrolling: touch;
+  }
+  &__list {
+    @include list-unstyled;
+    display:inline-flex;
+    gap: 40px;
+    margin-right:80px;
+    margin-bottom:4px;
+  }
+}

@@ -1,0 +1,57 @@
+.ce-center {
+  .ce-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  .ce-column {
+    margin-right: 0;
+    float: none;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .ce-textpic.ce-left.ce-above {
+    clear: both;
+  }
+
+  .ce-textpic.ce-left.ce-intext,
+  .ce-textpic.ce-right.ce-intext {
+    img {
+      width: auto;
+      max-width: 100%;
+    }
+
+    .ce-bodytext {
+      overflow: visible;
+    }
+
+    .ce-gallery {
+      float: none;
+    }
+  }
+
+  .frame-type-textmedia {
+    width: auto;
+  }
+}
+.dly-content {
+  a:not(.btn) { color:inherit;
+    &.fc-red, .fc-red {
+      color: $red;
+    }
+    &.fc-grey, .fc-grey {
+      color: $text-color;
+    }
+  }
+}
+.container > .container {
+  padding-left: 0;
+  padding-right: 0;
+}

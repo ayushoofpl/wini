@@ -1,0 +1,33 @@
+.bg-dark {
+  --bs-link-color-rgb: var(--bs-white-rgb);
+
+  a:hover {
+    --bs-link-color-rgb: var(--bs-white-rgb);
+    --bs-link-opacity: 0.8;
+  }
+}
+
+.bg-light2 {
+  background-color: $light2 !important;
+}
+
+.bg-green {
+  background-color: $green !important;
+}
+
+.bg-red {
+  background-color: $red !important;
+}
+
+.bg-icon {
+  @include media-breakpoint-up(xl){
+    background-image: url("../Icons/bulb.svg");
+    background-repeat: no-repeat;
+    background-position: -20% top;
+    background-size: contain;
+  }
+}
+
+.bg-darkgray {
+  background-color: $partner-gray
+}

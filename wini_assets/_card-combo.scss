@@ -1,0 +1,101 @@
+.card-combo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__icon-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+  }
+
+  &__icon-circle {
+    line-height: 1;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    justify-content: center;
+    width: var(--card-combo-circle-w);
+    height: var(--card-combo-circle-w);
+    color: $primary;
+    border-radius: 50%;
+    background: $white;
+    --card-combo-circle-w: 44px;
+
+    .icon {
+      font-size: calc(var(--card-combo-circle-w) * .68);
+    }
+
+    @include media-breakpoint-up(lg) {
+      --card-combo-circle-w: 80px;
+    }
+  }
+
+  &.bg-green &__icon-circle {
+    color: $white;
+    background: $green;
+  }
+
+  &.bg-red &__icon-circle {
+    color: $white;
+    background: $red;
+  }
+
+  &.bg-light &__icon-circle {
+    background: $light;
+  }
+
+  &.bg-primary &__icon-circle {
+    color: $white;
+    background: $primary;
+  }
+
+  &__body {
+    height: 100%;
+    padding: 30px 20px 40px 20px;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      padding: 67px 60px 67px 60px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      flex: auto;
+    }
+    a {
+      /*margin-bottom: 60px;*/
+    }
+  }
+  &__img {
+    height: auto;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &_horizontal {
+      align-items: center;
+      flex-direction: row;
+    }
+    &_horizontal &__img {
+      align-self: stretch;
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+    }
+    &_horizontal &__body {
+      width: 50%;
+    }
+    &_horizontal &__icon-row {
+      width: 10px;
+      height: 100%;
+    }
+    &_horizontal &__icon-circle {
+      margin-top: 0;
+      //margin-left: calc(var(--card-combo-circle-w) / -2);
+    }
+  }
+
+}

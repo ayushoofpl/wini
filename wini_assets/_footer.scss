@@ -1,0 +1,95 @@
+.page-footer {
+  font-size: 16px;
+  background-color: $light3;
+  color: $grey3;
+
+  .headline {
+    color: $text-color;
+    font-weight: 600;
+  }
+
+  a {
+    color: $grey3;
+  }
+
+  .h4.text-serif {
+    color: $red
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+
+  &__brand {
+    img {
+      width: 239px;
+
+      @include media-breakpoint-up(lg) {
+        width: 308px;
+      }
+    }
+  }
+
+  &__socialnav {
+    ul {
+      @include list-unstyled;
+      font-size: 35px;
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  &__copynav {
+    ul {
+      @include list-unstyled;
+      font-size: 16px;
+      display: flex;
+      gap: 1.5em;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 18px;
+      padding: 0 1rem;
+    }
+  }
+}
+
+.page-footer-mainnav {
+  font-size: 18px;
+
+  @include media-breakpoint-up(xl) {}
+
+  ul {
+    @include list-unstyled;
+
+    li {
+      margin-bottom: 0.3rem;
+
+      a[href*="/karriere/"]::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: $red;
+        position: relative;
+        top: -8px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 27px;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 22px;
+    }
+  }
+}

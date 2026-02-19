@@ -1,0 +1,33 @@
+.variants-nav {
+  @include list-unstyled;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  @include media-breakpoint-down(md) {
+    gap: 10px;
+    .mb-20px {
+      margin-bottom: 10px !important;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      flex: 0 0 auto;
+      width: auto;
+    }
+  }
+  p {
+    @include media-breakpoint-down(xl) {
+      &.fs-16px {
+        font-size: 13px !important;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0;
+    }
+  }
+}

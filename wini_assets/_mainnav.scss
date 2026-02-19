@@ -1,0 +1,146 @@
+.mainnav {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+  }
+
+  &__item {
+  }
+
+  &__item_active > &__link {
+    color: $primary;
+  }
+
+  &__link {
+    font-size: 20px;
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+      //text-decoration: underline;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 18px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 24px;
+    }
+    &_inline {
+      font-weight: 500;
+      display:inline-block;
+      @include media-breakpoint-up(lg) {
+        font-size: 16px;
+        padding: 18px 0;
+      }
+      @include media-breakpoint-up(xxl) {
+        padding: 23px 0;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.mainnav-sub {
+  position: fixed;
+  top: var(--page-bar-h);
+  right: 0;
+  left: 0;
+  overflow-y: auto;
+  max-height: calc(100vh - var(--page-bar-h));
+  padding: 60px 0;
+  pointer-events: none;
+  opacity: 0;
+  background: $white;
+  min-height: calc(100vh - var(--page-bar-h));
+  @include media-breakpoint-up(xl) {
+    padding: 110px 0;
+  }
+
+  @include media-breakpoint-up(lg){
+    &_bar {
+      min-height:0;
+      padding: 0;
+    }
+  }
+
+  &__close {
+    @include reset-btn;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    padding: calc($grid-gutter-width / 2);
+    color: $grey;
+  }
+
+  &.is-active {
+    transition: all 0.3s ease;
+    pointer-events: all;
+    opacity: 1;
+  }
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 16px;
+    @include media-breakpoint-up(xl) {
+      gap: 30px;
+    }
+    @include media-breakpoint-up(lg){
+      &_inline {
+        flex-direction: row;
+        justify-content: flex-end;
+
+      }
+    }
+  }
+}
+
+.mainnav-sub-card {
+  position: relative;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 156/88;
+  }
+
+  &__title {
+    font-size: 20px;
+    margin: 0;
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 24px;
+    }
+  }
+
+  &__desc {
+    display: none;
+    margin: 0;
+    //font-size: 16px;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.btn {
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--btn-h);
+  padding: 7px 20px;
+  transition: all .2s ease-out;
+  text-decoration: none;
+  color: currentColor;
+  border: 1px solid transparent;
+  border-radius: calc(var(--btn-h) / 2);
+  background-color: transparent;
+  --btn-h: 50px;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: calc(26 / 20);
+    padding: 7px 30px;
+    --btn-h: 50px;
+  }
+}
+
+.btn-select {
+  padding: 14px 50px 14px 20px;
+  cursor: pointer;
+  background-image: url("../Icons/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+  background-size: 19px 19px;
+  appearance: none;
+  max-width: 100%;
+
+  option {
+    font-size: 16px;
+  }
+
+  &:hover, &:active {
+    background-image: url("../Icons/chevron-down-white.svg");
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 17px 60px 17px 30px;
+  }
+}
+
+select[name="tx_dlywiniclub_reclamation[orderNumberSelect]"]:hover {
+  background-image: url("../Icons/chevron-down.svg") !important;
+}
+
+.reset-btn {
+  @include reset-btn;
+}
+
+.btn-sm {
+  @include media-breakpoint-up(lg) {
+    font-size: 15px;
+    --btn-h: 38px !important;
+  }
+}
+
+.btn-mobile-small {
+  @include media-breakpoint-down(sm) {
+    min-height: initial;
+    padding: 7px 9px;
+  }
+}
+
+.btn-xs {
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+    --btn-h: 34px;
+  }
+}
+
+.btn-primary {
+  color: $white;
+  border-color: $primary;
+  background-color: $primary;
+  --btn-h: 50px;
+
+  &.btn-select {
+    background-image: url("../Icons/chevron-down-white.svg");
+  }
+
+  &:hover, &:active {
+    background-color: darken($primary, 10%);
+    color: $white;
+  }
+}
+
+.btn-outline-white {
+  color: $white;
+  border-color: $white;
+  background-color: transparent;
+
+  &.btn-select {
+    background-image: url("../Icons/chevron-down-white.svg");
+
+    &:hover, &:active {
+      background-image: url("../Icons/chevron-down.svg");
+    }
+  }
+
+  &:hover, &:active {
+    color: $dark;
+    background-color: $light;
+  }
+}
+
+.btn-outline-dark {
+  color: $dark;
+  border-color: $dark;
+
+  &:hover, &:active {
+    color: $light;
+    background-color: $dark;
+  }
+}
+
+.btn-white {
+  color: $dark;
+  border-color: $white;
+  background: $white;
+
+  &:hover, &:active {
+    color: $white;
+    border-color: $primary;
+    background-color: $primary;
+  }
+}
+
+.btn-close {
+  @include reset-btn;
+  font-size: 21px;
+}

@@ -1,0 +1,54 @@
+.card-overlay {
+  position: relative;
+  overflow: hidden;
+  color: $white;
+
+  &__media {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 20px 30px;
+    transition: $transition-custom;
+    background: rgba($black, .7);
+  }
+
+  &__badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  &:hover &__title {
+    opacity: 0;
+  }
+
+  &__body {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    max-height: 100%;
+    padding: 20px 30px;
+    transition: $transition-custom;
+    transform: translateY(100%);
+    opacity: 0;
+    background: rgba($black, .7);
+  }
+
+  &:hover &__body {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

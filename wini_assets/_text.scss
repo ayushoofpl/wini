@@ -1,0 +1,39 @@
+@use "sass:list";
+// First value: font-size deskop
+// Second value: line-height deskop
+// Third value: font-size mobile
+// Fourth value: line-height mobile
+
+$sizes: (
+                (14, 18, 14, 18),
+                (15, 18, 14, 17),
+                (16, 23, 14, 18),
+                (17, 20, 15, 19),
+                (18, 28, 16, 20),
+                (19, 28, 16, 20),
+                (20, 26, 18, 20),
+                (22, 28, 18, 22),
+                (30, 38, 24, 32),
+                (40, 57, 32, 42),
+                (60, 84, 45, 55),
+);
+
+.text {
+  @each $size in $sizes {
+    &-#{list.nth($size, 1)} {
+      font-size: rem(list.nth($size, 1));
+      line-height: rem(list.nth($size, 2));
+
+      @if (list.nth($size, 1) != list.nth($size, 3)) {
+        @include media-breakpoint-down(lg) {
+          font-size: rem(list.nth($size, 3));
+          line-height: rem(list.nth($size, 4));
+        }
+      }
+    }
+  }
+}
+
+.text-italic {
+  font-style: italic;
+}

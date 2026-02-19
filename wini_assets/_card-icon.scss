@@ -1,0 +1,57 @@
+.card-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: $grid-gutter-half;
+  transition: $transition-custom;
+  text-align: center;
+  @include media-breakpoint-up(xl) {
+    min-height: 360px;
+  }
+  &:hover {
+    background: $light;
+
+    .icon {
+      transition: $transition-custom;
+      color: $primary;
+    }
+    .bg-light & {
+      background: $white;
+    }
+  }
+
+
+
+  &__title {
+    margin-bottom: 15px;
+    .justify-content-center & {
+      @include media-breakpoint-up(xxl) {
+        min-height: 68px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl){
+    &__desc {
+      overflow: hidden;
+      max-height: 0;
+      margin: 0;
+      transition: $transition-custom;
+      opacity: 0;
+      p:last-of-type {
+        margin-bottom:0;
+      }
+    }
+
+    &:hover &__desc {
+      max-height: 6em;
+      opacity: 1;
+    }
+  }
+  .icon {
+    width: auto;
+    height: 58px;
+    margin-bottom: 15px;
+  }
+}

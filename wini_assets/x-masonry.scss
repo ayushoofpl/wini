@@ -1,0 +1,36 @@
+@import "Scss/Bootstrap/setup";
+
+.masonry {
+  display: block;
+  width: 100%;
+  margin-right: calc(var(--masonry-gutter) * -1);
+  margin-left: calc(var(--masonry-gutter) * -1);
+  --masonry-gutter: 5px;
+
+  &__body {
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.masonry-tile {
+  padding: var(--masonry-gutter);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      @for $i from 1 through 12 {
+        &#{$infix}-#{$i} {
+          height: calc(var(--masonry-tile-h-unit) * #{$i});
+        }
+      }
+    }
+  }
+}
+
+.masonry-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

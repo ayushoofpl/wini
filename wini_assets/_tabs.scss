@@ -1,0 +1,56 @@
+.tabs {
+  .tab-menu {
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+
+      @include media-breakpoint-down(md) {
+        display: flex;
+        margin-bottom: 30px;
+      }
+    }
+    
+    .tab-menu-item {
+      padding: 15px 50px;
+      border: 1px solid $grey2;
+      border-left: none;
+      background: white;
+      top: 1px;
+      position: relative;
+      cursor: pointer;
+
+      &:first-of-type {
+        border-left: 1px solid $grey2;
+      }
+
+      &.active {
+        border-bottom: none;
+        color: $red;
+      }
+    }
+  }
+
+  .tab-pane {
+    display: none;
+    border: 1px solid $grey2;
+    padding: 25px 35px;
+
+    @include media-breakpoint-down(md) {
+      border: none;
+      padding: 0;
+    }
+
+    iframe {
+      border: none;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}

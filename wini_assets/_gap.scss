@@ -1,0 +1,13 @@
+.gap {
+  &--0 {
+    gap: 0 !important;
+  }
+
+    &--15 {
+        gap: 15px !important;
+    }
+
+    &--20 {
+        gap: 20px !important;
+    }
+}

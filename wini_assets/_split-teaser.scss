@@ -1,0 +1,132 @@
+.split-teaser {
+  position: relative;
+  overflow: hidden;
+
+  &__bg-full {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      max-width: none;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      .split-teaser-no-text & {
+        position: static;
+      }
+    }
+  }
+
+  &__bg-big {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: 0;
+      display: block;
+      max-width: none;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @each $breakpoint, $max-width in $container-max-widths {
+      @if $max-width > 1000px {
+        @include media-breakpoint-up($breakpoint) {
+          width: calc(
+            100% + (100vw - #{$max-width}) / 2 - #{$grid-gutter-width} / -2
+          );
+        }
+      }
+    }
+  }
+
+  &_alt &__bg-big {
+    @include media-breakpoint-up(lg) {
+      right: unset;
+      left: 0;
+    }
+  }
+
+  &__bg-small {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: center;
+
+    @include media-breakpoint-up(lg) {
+      left: 0;
+      transform: none;
+    }
+
+    //@each $breakpoint, $max-width in $container-max-widths {
+    //  @if $max-width > 1000px {
+    //    @include media-breakpoint-up($breakpoint) {
+    //      width: calc(100% + (100vw - #{$max-width}) / 2 - #{$grid-gutter-width} / -2);
+    //    }
+    //  }
+    //}
+  }
+
+  &_alt &__bg-small {
+    @include media-breakpoint-up(lg) {
+      right: 0;
+      left: unset;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    padding: 30px 20px;
+
+    @include media-breakpoint-down(lg) {
+      transform: translateY(-50%);
+      margin-top: 0;
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 90px;
+      margin-bottom: 90px;
+      margin-left: -25%;
+      padding: 40px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding: 90px 60px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      @extend .h1;
+    }
+  }
+
+  &_alt &__content {
+    @include media-breakpoint-up(lg) {
+      margin-right: -25%;
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.page-bar {
+  position: fixed;
+  z-index: 1020;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: var(--page-bar-h);
+  background: rgba($light, 0.85);
+  backdrop-filter: saturate(140%) blur(1.2rem);
+  transition: all .2s ease;
+  @include media-breakpoint-up(lg){
+    &_hidden {
+      --page-bar-h: 80px;
+    }
+  }
+  &__brand {
+    display: block;
+    width: 156px;
+    @include media-breakpoint-up(lg) {
+      width: 220px;
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 340px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-bar-offset {
+  padding-top: var(--page-bar-h);
+}
+
+.page-no-menu {
+  .metanav, .mobilenav, .mainnav, .breadcrumbs { display:none !important; }
+  @include media-breakpoint-up(lg){
+    --page-bar-h: 80px;
+  }
+  .page-no-menu-meta {
+    display:block !important;
+  }
+}
