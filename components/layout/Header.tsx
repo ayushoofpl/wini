@@ -140,7 +140,7 @@ export function Header() {
                                             "h-full flex items-center text-[17px] font-normal tracking-tight transition-all duration-300 border-b-2 border-transparent",
                                             activeMenu === item.label
                                                 ? "text-primary border-primary"
-                                                : "text-black hover:text-primary"
+                                                : "text-neutral-500 hover:text-primary"
                                         )}
                                     >
                                         {item.label}
