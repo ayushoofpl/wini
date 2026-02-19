@@ -109,7 +109,7 @@ export function Hero({
                         className="max-w-6xl space-y-6"
                     >
                         <motion.div variants={titleVariants} className="overflow-hidden">
-                            <h1 className={`${isSmall ? "text-3xl md:text-5xl" : "text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem]"} font-slogan text-white leading-[1.1] tracking-tight`}>
+                            <h1 className={`${isSmall ? "text-2xl md:text-4xl" : "text-3xl md:text-5xl lg:text-6xl xl:text-[4.5rem]"} font-slogan text-white leading-[1.1] tracking-tight`}>
                                 {title || (
                                     <>
                                         Pure <br />
@@ -122,7 +122,7 @@ export function Hero({
                         {subtitle && (
                             <motion.p
                                 variants={titleVariants}
-                                className="text-base md:text-lg lg:text-xl text-neutral-200 max-w-2xl font-light leading-relaxed"
+                                className="text-sm md:text-base lg:text-lg text-neutral-200 max-w-2xl font-light leading-relaxed"
                             >
                                 {subtitle}
                             </motion.p>

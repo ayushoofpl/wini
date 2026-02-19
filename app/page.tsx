@@ -21,7 +21,6 @@ export default function Home() {
             <span className="italic font-serif">becomes my office.</span>
           </>
         }
-        subtitle="Individual office furniture and holistic furnishing concepts for modern working environments."
         videoBackground="https://www.wini.de/fileadmin/user_upload/wini_videos/WINEA_TEAMS__Konferenz.mp4"
         backgroundImage="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2000"
       />
